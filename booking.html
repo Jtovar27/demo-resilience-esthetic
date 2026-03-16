@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book an Appointment — Resilience Esthetic & Spa</title>
+  <meta name="description" content="Schedule your personalized skincare or waxing appointment at Resilience Esthetic & Spa in Kissimmee, FL. English & Spanish available." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .booking-hero-img {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.12;
+    }
+    .page-hero { position: relative; }
+    .booking-form-section {
+      background: var(--beige);
+      padding: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .booking-form-section h3 { margin-bottom: 1.75rem; }
+    .payment-note {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      background: var(--white);
+      padding: 1.25rem;
+      margin-top: 1rem;
+      border-left: 3px solid var(--gold);
+    }
+    .payment-note p {
+      font-size: 0.88rem;
+      color: var(--text-medium);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      Resilience
+      <span class="nav-logo-sub">Esthetic &amp; Spa</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a></li>
+      <li><a href="about.html"><span class="lang-en">About</span><span class="lang-es">Nosotros</span></a></li>
+      <li><a href="services.html"><span class="lang-en">Services</span><span class="lang-es">Servicios</span></a></li>
+      <li><a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-es">Galería</span></a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-toggle-nav">
+        <button class="lang-btn lang-btn-en active">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn lang-btn-es">ES</button>
+      </div>
+      <a href="booking.html" class="nav-cta active">
+        <span class="lang-en">Book Now</span>
+        <span class="lang-es">Agendar</span>
+      </a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+  <div class="nav-mobile-header">
+    <div class="nav-mobile-logo">
+      Resilience
+      <span class="nav-mobile-logo-sub">Esthetic &amp; Spa</span>
+    </div>
+    <button class="nav-close" id="navClose" aria-label="Close menu">&#10005;</button>
+  </div>
+  <a href="index.html"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a>
+  <a href="about.html"><span class="lang-en">About</span><span class="lang-es">Nosotros</span></a>
+  <a href="services.html"><span class="lang-en">Services</span><span class="lang-es">Servicios</span></a>
+  <a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-es">Galería</span></a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a>
+  <a href="booking.html" class="btn btn-primary" style="margin-top:0.5rem;">
+    <span class="lang-en">Book Now</span><span class="lang-es">Agendar Cita</span>
+  </a>
+  <div class="mobile-lang">
+    <button class="lang-btn lang-btn-en">EN</button>
+    <span style="color:var(--beige-dark);">|</span>
+    <button class="lang-btn lang-btn-es">ES</button>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<div class="page-hero" style="overflow:hidden;">
+  <div class="booking-hero-img"></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <span class="section-label">
+      <span class="lang-en">Schedule Your Visit</span>
+      <span class="lang-es">Programa Tu Visita</span>
+    </span>
+    <h1>
+      <span class="lang-en">Book an Appointment</span>
+      <span class="lang-es">Agendar una Cita</span>
+    </h1>
+    <span class="gold-line"></span>
+    <p>
+      <span class="lang-en">Choose your preferred service and time — we'll confirm your appointment and prepare everything just for you.</span>
+      <span class="lang-es">Elige tu servicio y horario preferido — confirmaremos tu cita y prepararemos todo especialmente para ti.</span>
+    </p>
+  </div>
+</div>
+
+<!-- ===== BOOKING SECTION ===== -->
+<section class="booking-section">
+  <div class="container">
+    <div class="booking-layout">
+
+      <!-- Main Booking Column -->
+      <div>
+        <!-- Calendly Placeholder -->
+        <div class="booking-form-section">
+          <span class="section-label">
+            <span class="lang-en">Online Booking</span>
+            <span class="lang-es">Reserva en Línea</span>
+          </span>
+          <span class="gold-line-left"></span>
+          <h3>
+            <span class="lang-en">Schedule Your Session</span>
+            <span class="lang-es">Programa Tu Sesión</span>
+          </h3>
+
+          <!-- Calendly Embed Placeholder -->
+          <div class="calendly-placeholder">
+            
+            <h3 style="font-size:1.2rem; margin-bottom:0.75rem;">
+              <span class="lang-en">Calendly Integration</span>
+              <span class="lang-es">Integración de Calendly</span>
+            </h3>
+            <p style="font-size:0.92rem; color:var(--text-light); max-width:360px; margin:0 auto 1.5rem;">
+              <span class="lang-en">Your live Calendly calendar will appear here — clients can select their service, choose a time, and book instantly.</span>
+              <span class="lang-es">Tu calendario de Calendly en vivo aparecerá aquí — los clientes pueden seleccionar su servicio, elegir un horario y reservar al instante.</span>
+            </p>
+            <a href="https://calendly.com" target="_blank" class="btn btn-primary" style="font-size:0.72rem;">
+              <span class="lang-en">Connect Calendly Account</span>
+              <span class="lang-es">Conectar Cuenta de Calendly</span>
+            </a>
+            <p style="font-size:0.75rem; color:var(--text-light); margin-top:1rem; font-style:italic;">
+              <span class="lang-en">Calendly embed code goes here: &lt;div class="calendly-inline-widget" /&gt;</span>
+              <span class="lang-es">El código de Calendly va aquí: &lt;div class="calendly-inline-widget" /&gt;</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Booking Form Alternative -->
+        <div class="booking-form-section">
+          <span class="section-label">
+            <span class="lang-en">Or Request an Appointment</span>
+            <span class="lang-es">O Solicita una Cita</span>
+          </span>
+          <h3>
+            <span class="lang-en">Appointment Request Form</span>
+            <span class="lang-es">Formulario de Solicitud de Cita</span>
+          </h3>
+          <form>
+            <div class="form-row">
+              <div class="form-group">
+                <label>
+                  <span class="lang-en">First Name *</span>
+                  <span class="lang-es">Nombre *</span>
+                </label>
+                <input type="text" required placeholder="Your name" />
+              </div>
+              <div class="form-group">
+                <label>
+                  <span class="lang-en">Last Name</span>
+                  <span class="lang-es">Apellido</span>
+                </label>
+                <input type="text" placeholder="Your last name" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>
+                  <span class="lang-en">Email Address *</span>
+                  <span class="lang-es">Correo Electrónico *</span>
+                </label>
+                <input type="email" required placeholder="your@email.com" />
+              </div>
+              <div class="form-group">
+                <label>
+                  <span class="lang-en">Phone / WhatsApp *</span>
+                  <span class="lang-es">Teléfono / WhatsApp *</span>
+                </label>
+                <input type="tel" required placeholder="(407) 000-0000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>
+                <span class="lang-en">Service Requested *</span>
+                <span class="lang-es">Servicio Solicitado *</span>
+              </label>
+              <select required>
+                <option value="">
+                  -- Select a service --
+                </option>
+                <optgroup label="Waxing">
+                  <option>Brazilian Wax</option>
+                  <option>Full Body Wax</option>
+                  <option>Booty Wax</option>
+                  <option>Chest Wax</option>
+                  <option>Leg Wax</option>
+                  <option>Eyebrow / Facial Wax</option>
+                </optgroup>
+                <optgroup label="Intimate Care">
+                  <option>Vajacial</option>
+                  <option>Vajacial + Brightening</option>
+                </optgroup>
+                <optgroup label="Facials &amp; Skin">
+                  <option>Signature Glow Facial</option>
+                  <option>Acne Treatment Facial</option>
+                  <option>Brightening Facial</option>
+                  <option>Sensitive Skin Facial</option>
+                  <option>Deep Hydration Facial</option>
+                  <option>Skin Consultation</option>
+                </optgroup>
+                <optgroup label="Training">
+                  <option>Advanced Waxing Certification</option>
+                  <option>Vajacial Training</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>
+                  <span class="lang-en">Preferred Date</span>
+                  <span class="lang-es">Fecha Preferida</span>
+                </label>
+                <input type="date" />
+              </div>
+              <div class="form-group">
+                <label>
+                  <span class="lang-en">Preferred Time</span>
+                  <span class="lang-es">Hora Preferida</span>
+                </label>
+                <select>
+                  <option>Morning (9am – 12pm)</option>
+                  <option>Afternoon (12pm – 4pm)</option>
+                  <option>Late Afternoon (4pm – 7pm)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>
+                <span class="lang-en">Preferred Language</span>
+                <span class="lang-es">Idioma Preferido</span>
+              </label>
+              <select>
+                <option>English</option>
+                <option>Español</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>
+                <span class="lang-en">Skin Concerns or Notes</span>
+                <span class="lang-es">Problemas de Piel o Notas</span>
+              </label>
+              <textarea placeholder="Any allergies, skin conditions, previous treatments, or questions you'd like us to know..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <span class="lang-en">Submit Appointment Request</span>
+              <span class="lang-es">Enviar Solicitud de Cita</span>
+            </button>
+          </form>
+
+          <div class="payment-note">
+            
+            <p>
+              <span class="lang-en"><strong>Deposit note:</strong> A deposit may be required to hold your appointment for select services. We accept credit/debit cards, Zelle, Venmo, and cash. Full payment details will be confirmed when we respond to your request.</span>
+              <span class="lang-es"><strong>Nota sobre depósito:</strong> Para algunos servicios puede requerirse un depósito para reservar tu cita. Aceptamos tarjetas de crédito/débito, Zelle, Venmo y efectivo. Los detalles completos de pago se confirmarán cuando respondamos a tu solicitud.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <div class="booking-sidebar-block">
+          <span class="section-label">
+            <span class="lang-en">Prefer WhatsApp?</span>
+            <span class="lang-es">¿Prefieres WhatsApp?</span>
+          </span>
+          <span class="gold-line-left"></span>
+          <h3>
+            <span class="lang-en">Book Instantly</span>
+            <span class="lang-es">Reserva al Instante</span>
+          </h3>
+          <p>
+            <span class="lang-en">Skip the form and message us directly on WhatsApp. We'll help you choose the right service and confirm your appointment in minutes — in English or Spanish.</span>
+            <span class="lang-es">Omite el formulario y escríbenos directamente por WhatsApp. Te ayudaremos a elegir el servicio correcto y confirmaremos tu cita en minutos — en inglés o español.</span>
+          </p>
+          <a href="https://wa.me/14070000000" class="whatsapp-cta-btn" target="_blank" rel="noopener" style="text-decoration:none; border-radius:0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span class="lang-en">WhatsApp: (407) 000-0000</span>
+            <span class="lang-es">WhatsApp: (407) 000-0000</span>
+          </a>
+        </div>
+
+        <div class="booking-sidebar-block">
+          <span class="section-label">
+            <span class="lang-en">How It Works</span>
+            <span class="lang-es">Cómo Funciona</span>
+          </span>
+          <h3>
+            <span class="lang-en">Your Booking Journey</span>
+            <span class="lang-es">Tu Camino de Reserva</span>
+          </h3>
+          <ul class="booking-steps">
+            <li>
+              <div>
+                <strong>
+                  <span class="lang-en">Choose Your Service</span>
+                  <span class="lang-es">Elige Tu Servicio</span>
+                </strong><br>
+                <span style="font-size:0.85rem; color:var(--text-light);">
+                  <span class="lang-en">Select from our service catalog or ask for guidance</span>
+                  <span class="lang-es">Selecciona de nuestro catálogo o pide orientación</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>
+                  <span class="lang-en">Pick Your Time</span>
+                  <span class="lang-es">Elige Tu Horario</span>
+                </strong><br>
+                <span style="font-size:0.85rem; color:var(--text-light);">
+                  <span class="lang-en">Select a date and time that works for you</span>
+                  <span class="lang-es">Selecciona una fecha y hora que te funcione</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>
+                  <span class="lang-en">Confirm Your Appointment</span>
+                  <span class="lang-es">Confirma Tu Cita</span>
+                </strong><br>
+                <span style="font-size:0.85rem; color:var(--text-light);">
+                  <span class="lang-en">We'll confirm via email or WhatsApp within a few hours</span>
+                  <span class="lang-es">Confirmaremos por email o WhatsApp en pocas horas</span>
+                </span>
+              </div>
+            </li>
+            <li>
+              <div>
+                <strong>
+                  <span class="lang-en">Arrive &amp; Glow</span>
+                  <span class="lang-es">Llega y Brilla</span>
+                </strong><br>
+                <span style="font-size:0.85rem; color:var(--text-light);">
+                  <span class="lang-en">Come in, relax, and let us take care of the rest</span>
+                  <span class="lang-es">Entra, relájate y déjanos encargarnos del resto</span>
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="payment-info">
+          <span class="section-label" style="text-align:left; display:block; margin-bottom:0.75rem;">
+            <span class="lang-en">Payment Options</span>
+            <span class="lang-es">Opciones de Pago</span>
+          </span>
+          <h4>
+            <span class="lang-en">We Make It Easy</span>
+            <span class="lang-es">Lo Hacemos Fácil</span>
+          </h4>
+          <p>
+            <span class="lang-en">Multiple payment options available for your convenience. Deposits may be required for select appointments.</span>
+            <span class="lang-es">Múltiples opciones de pago disponibles para tu conveniencia. Algunos servicios pueden requerir depósito.</span>
+          </p>
+          <div class="payment-badges">
+            <span class="payment-badge">Card</span>
+            <span class="payment-badge">Cash</span>
+            <span class="payment-badge">Zelle</span>
+            <span class="payment-badge">Venmo</span>
+          </div>
+        </div>
+
+        <div style="margin-top:1.5rem; text-align:center;">
+          <p style="font-size:0.85rem; color:var(--text-light); font-weight:300; margin-bottom:1rem;">
+            <span class="lang-en">Questions before booking?</span>
+            <span class="lang-es">¿Preguntas antes de reservar?</span>
+          </p>
+          <a href="contact.html" class="btn btn-gold-outline" style="font-size:0.68rem; padding:10px 18px;">
+            <span class="lang-en">Contact Us First</span>
+            <span class="lang-es">Contáctanos Primero</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-name">Resilience</div>
+        <span class="footer-brand-sub">Esthetic &amp; Spa</span>
+        <p>
+          <span class="lang-en">Holistic skincare and waxing services in Kissimmee, FL.</span>
+          <span class="lang-es">Servicios holísticos de cuidado de piel en Kissimmee, FL.</span>
+        </p>
+        <div class="social-links">
+          <a href="#" class="social-link">IG</a>
+          <a href="#" class="social-link">FB</a>
+          <a href="#" class="social-link">TK</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-en">Navigate</span><span class="lang-es">Navegar</span></h4>
+        <ul>
+          <li><a href="index.html"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a></li>
+          <li><a href="about.html"><span class="lang-en">About</span><span class="lang-es">Nosotros</span></a></li>
+          <li><a href="services.html"><span class="lang-en">Services</span><span class="lang-es">Servicios</span></a></li>
+          <li><a href="gallery.html"><span class="lang-en">Gallery</span><span class="lang-es">Galería</span></a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html"><span class="lang-en">Contact</span><span class="lang-es">Contacto</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-en">Services</span><span class="lang-es">Servicios</span></h4>
+        <ul>
+          <li><a href="services.html">Brazilian Wax</a></li>
+          <li><a href="services.html">Vajacials</a></li>
+          <li><a href="services.html">Facials</a></li>
+          <li><a href="services.html"><span class="lang-en">Skincare Treatments</span><span class="lang-es">Tratamientos de Piel</span></a></li>
+          <li><a href="services.html"><span class="lang-en">Training</span><span class="lang-es">Certificación</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4><span class="lang-en">Get in Touch</span><span class="lang-es">Contáctanos</span></h4>
+        <p class="footer-contact-item">Kissimmee, FL 34741</p>
+        <p class="footer-contact-item">(407) 000-0000</p>
+        <p class="footer-contact-item">hello@resilienceesthetic.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Resilience Esthetic &amp; Spa.</p>
+      <p style="color: var(--gold); opacity:0.6; font-size:0.72rem;">Kissimmee · Orlando · St. Cloud, FL</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/14070000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
